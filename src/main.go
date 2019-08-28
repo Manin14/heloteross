@@ -31,7 +31,7 @@ func main() {
 	fmt.Println(hasilnya) //harusnya si hasilnya 2 XD
 
 	//coba random angka
-	var count int = 1000000
+	var count int = 10
 	for index := 1; index <= count; index++ {
 		angkaRandom := randomAngka(index, index)
 		fmt.Println(angkaRandom)
@@ -39,5 +39,8 @@ func main() {
 			break
 		}
 	}
+
+	//coba math
+	Powpow()
 
 }
