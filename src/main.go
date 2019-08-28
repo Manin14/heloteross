@@ -31,16 +31,24 @@ func main() {
 	fmt.Println(hasilnya) //harusnya si hasilnya 2 XD
 
 	//coba random angka
-	var count int = 10
-	for index := 1; index <= count; index++ {
-		angkaRandom := randomAngka(index, index)
-		fmt.Println(angkaRandom)
-		if index == count {
-			break
-		}
-	}
+	// var count int = 10
+	// for index := 1; index <= count; index++ {
+	// 	angkaRandom := randomAngka(index, index)
+	// 	fmt.Println(angkaRandom)
+	// 	if index == count {
+	// 		break
+	// 	}
+	// }
 
-	//coba math
+	//coba math pow
 	Powpow()
+	//coba akar
+	var angkanya float64 = 16
+	kuadrat := Sqrtsqrt(angkanya)
+	fmt.Println("hasil sqrt(", angkanya, ")", kuadrat)
 
+	//tipedata , bingung ya ? wkkwkw
+	var tipe1 uint8 //255
+	tipe1 = 255
+	fmt.Println(tipe1)
 }

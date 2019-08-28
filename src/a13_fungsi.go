@@ -32,3 +32,25 @@ func randomAngka(min int, max int) int {
 	return Angka
 
 }
+
+//coba return map ya
+func retrunMap() map[string]string {
+	var mapString = map[string]string{
+		"one":    "1",
+		"two":    "2",
+		"theree": "3",
+		"four":   "4",
+	}
+	return mapString
+}
+
+//coba return array ya
+func retrunArr() []string {
+	var arrString = []string{
+		"aku",
+		"saya",
+		"gua",
+		"gue",
+	}
+	return arrString
+}
