@@ -31,10 +31,13 @@ func main() {
 	fmt.Println(hasilnya) //harusnya si hasilnya 2 XD
 
 	//coba random angka
-	var count int = 100
-	for index := 1; index < count; index++ {
+	var count int = 1000000
+	for index := 1; index <= count; index++ {
 		angkaRandom := randomAngka(index, index)
-		fmt.Println("dapet berapa ya => ", angkaRandom)
+		fmt.Println(angkaRandom)
+		if index == count {
+			break
+		}
 	}
 
 }
