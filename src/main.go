@@ -51,4 +51,34 @@ func main() {
 	var tipe1 uint8 //255
 	tipe1 = 255
 	fmt.Println(tipe1)
+
+	//2 nilai
+	var nilai1, nilai2 = duaReturn()
+	fmt.Println("nilai1 = ", nilai1)
+	fmt.Println("nilai2 = ", nilai2)
+
+	//lingkaran
+	var luasLingkaran, kelilingLingkaran = lingkaran(4)
+	fmt.Println("luas lingkaran : ", luasLingkaran)
+	fmt.Println("keliling lingkaran : ", kelilingLingkaran)
+
+	//variadic
+	//dengan map
+	var deretAngka = []int{1, 2, 3, 4, 5, 6, 7, 8}
+	var ratarata = rataRata(deretAngka...)
+	fmt.Println(ratarata)
+
+	//return string
+	var stringnya = returnString("satu", "satu", "dua")
+	fmt.Println(stringnya)
+
+	//closure with variadic
+	var listAngka = []int{1, 2, 3}
+	// var mouse = ([]int{1, 2, 3})
+	var mouse2 = (listAngka)
+	fmt.Println(mouse2)
+
+	//closure style
+	fmt.Println("isi dari iife fnc => ", iife)
+
 }
