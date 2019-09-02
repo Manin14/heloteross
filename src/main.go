@@ -107,4 +107,6 @@ func main() {
 	withSliceAndMap()
 	sliceAnonStruct()
 	nestedStruct()
+
+	//asdsd
 }
