@@ -134,3 +134,42 @@ func withSliceAndMap() {
 		fmt.Println(each.key11)
 	}
 }
+func sliceAnonStruct() {
+	var sliceAnonStruct = []struct {
+		key0 int
+		key1 string
+	}{
+		{
+			key0: 0,
+			key1: "key1",
+		},
+		{
+			key0: 0,
+			key1: "key1",
+		},
+	}
+
+	for _, each := range sliceAnonStruct {
+		fmt.Println(each)
+	}
+}
+func nestedStruct() {
+	type nestedStruct struct {
+		nama             string
+		hobi             []string
+		tempatTanggalLhr struct {
+			tempat  string
+			tanggal int
+		}
+	}
+
+	var data = nestedStruct{}
+
+	// data.tempatTanggalLhr = isi
+	// data.tempatTanggalLhr.tempat = "tempat"
+	// data.tempatTanggalLhr.tanggal = 16
+	data.nama = "rifky"
+	data.hobi = []string{"hobi1", "hobi2"}
+	fmt.Println(data)
+
+}
