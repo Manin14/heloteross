@@ -105,6 +105,4 @@ func main() {
 	cobaEmbeded()
 	cobaAnonStruct()
 	withSliceAndMap()
-	sliceAnonStruct()
-	nestedStruct()
 }
