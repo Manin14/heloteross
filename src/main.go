@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
 func main() {
@@ -81,4 +82,27 @@ func main() {
 	//closure style
 	fmt.Println("isi dari iife fnc => ", iife)
 
+	//coba fungsi params
+	var iniData = []string{
+		"data1",
+		"data2",
+		"data3",
+	}
+	var RunFcFilter = filter(iniData, func(each string) bool {
+		fmt.Println("isi dari each => ", each)
+		return strings.Contains(each, "1")
+	})
+	fmt.Println(RunFcFilter)
+
+	//coba pointer
+	fmt.Println("------------------------------------------ pointer")
+	cobaPointer()
+
+	//coba struct
+	cobaStruct()
+	cobaStruct2()
+	cobaStruct3()
+	cobaEmbeded()
+	cobaAnonStruct()
+	withSliceAndMap()
 }

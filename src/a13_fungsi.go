@@ -54,3 +54,19 @@ func retrunArr() []string {
 	}
 	return arrString
 }
+
+func filter(data []string, callback func(string) bool) []string {
+	var result []string
+	for keys, each := range data {
+		filtered := callback(each)
+		fmt.Print(keys, each, " ")
+
+		fmt.Println("search ", filtered)
+		if filtered {
+			fmt.Println("got it !")
+			result = append(result, each)
+		}
+
+	}
+	return result
+}
