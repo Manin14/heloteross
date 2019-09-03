@@ -3,6 +3,10 @@ package main
 import (
 	"fmt"
 	"strings"
+
+	. "belajar-golang-level-akses/library"
+
+	"./library"
 )
 
 func main() {
@@ -153,4 +157,15 @@ func main() {
 		fmt.Println(pecahDuarr[i])
 	}
 
+	//
+	fmt.Println("setelah di gabungin \n", gabungIn)
+
+	//yg ada di a13
+	sayHello()
+
+	//panggil semua yg ada di library taro sini
+	SayHello()
+
+	//
+	librarylagi.Helloworld()
 }

@@ -7,6 +7,12 @@ import (
 	"time"
 )
 
+//fungsi ini akan otomatis di panggil pertama kali ketika aplikasi ini runing
+//
+func init() {
+	fmt.Println("@a13 : fungsi ini akan otomatis di panggil pertama kali ketika aplikasi ini runing")
+}
+
 func setStringMessages(arr []string) {
 	//ini mirip implode di php cuk XD
 	var localString = strings.Join(arr, " ")
@@ -69,4 +75,8 @@ func filter(data []string, callback func(string) bool) []string {
 
 	}
 	return result
+}
+
+func sayHello() {
+	fmt.Println("say hello in a13")
 }

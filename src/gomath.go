@@ -5,6 +5,11 @@ import (
 	"math"
 )
 
+//fungsi ini akan otomatis di panggil pertama kali ketika aplikasi ini runing
+//
+func init() {
+	fmt.Println("@gomath : fungsi ini akan otomatis di panggil pertama kali ketika aplikasi ini runing")
+}
 func Powpow() {
 
 	var a, b float64
