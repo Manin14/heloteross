@@ -109,4 +109,48 @@ func main() {
 	nestedStruct()
 
 	//asdsd
+
+	var mahasiswa = structnya2{
+		nama:  "rifky",
+		kelas: "S7N",
+		hobi:  []string{"hobi12", "hobi22"},
+	}
+	var Lnm = listDatanm{
+		{
+			[]string{
+				"mouse",
+				"keyboard",
+				"monitor",
+			},
+		}, {
+			[]string{
+				"mouse2",
+				"keyboard2",
+				"monitor2",
+			},
+		},
+	}
+	var nmMhs = mahasiswa.getName()
+	fmt.Println("nama mahasiswanya adalah : ", nmMhs)
+
+	var namaBaru = "rifky azmi"
+	fmt.Println("coba ganti nama ", mahasiswa.nama, "ke", namaBaru)
+	mahasiswa.changeName(namaBaru)
+	fmt.Println("nama mahasiswanya adalah : ", mahasiswa.nama)
+	mahasiswa.getOffsets()
+	//slice struct
+	fmt.Println(Lnm)
+
+	//strings here :D
+	fmt.Println(pecahDuarr)
+	for _, eachDuar := range pecahDuarr {
+		fmt.Println(eachDuar)
+	}
+	///
+	totArr := len(pecahDuarr)
+	fmt.Println("total", totArr)
+	for i := 0; i < totArr; i++ {
+		fmt.Println(pecahDuarr[i])
+	}
+
 }
