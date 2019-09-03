@@ -168,4 +168,30 @@ func main() {
 
 	//
 	librarylagi.Helloworld()
+
+	//coba interface
+	var bangungDatar hitung
+	bangungDatar = lingkaran2{10}
+	var jrjr = bangungDatar.luas()
+	fmt.Println(jrjr)
+	fmt.Println("jari jari di panggil dari struct lingkaran", bangungDatar.(lingkaran2).jariJari())
+
+	bangungDatar = persegi2{10, 20, 4}
+	// bangungDatar.panjang = 10
+	// bangungDatar.lebar = 20
+	// bangungDatar.sisi = 4
+	var lsp = bangungDatar.luas()
+	var kel = bangungDatar.keliling()
+	var carsisi = bangungDatar.(persegi2).carisisi()
+	fmt.Println(lsp)
+	fmt.Println(kel)
+	fmt.Println(carsisi)
+
+	var bangunRuang hitung2
+	bangunRuang = kubus{4}
+	var vol = bangunRuang.volume()
+	fmt.Println("volume kubus = ", vol)
+	fmt.Println("luas kubus = ", bangunRuang.luas())
+	fmt.Println("keliling kubus = ", bangunRuang.keliling())
+
 }
