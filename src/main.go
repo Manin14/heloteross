@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	. "belajar-golang-level-akses/library"
+	. "github.com/mqnoy/belajar-golang-level-akses/library"
 
 	"./library"
 )
