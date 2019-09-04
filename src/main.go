@@ -194,4 +194,6 @@ func main() {
 	fmt.Println("luas kubus = ", bangunRuang.luas())
 	fmt.Println("keliling kubus = ", bangunRuang.keliling())
 
+	//test git statsh
+
 }
