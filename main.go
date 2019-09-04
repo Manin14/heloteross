@@ -6,6 +6,8 @@ import (
 
 	. "github.com/mqnoy/belajar-golang-level-akses/library"
 
+	"math"
+
 	"./library"
 )
 
@@ -194,4 +196,51 @@ func main() {
 	fmt.Println("luas kubus = ", bangunRuang.luas())
 	fmt.Println("keliling kubus = ", bangunRuang.keliling())
 
+	//interface kosong
+
+	//aka dynamic typing
+	var bebas interface{}
+
+	bebas = "ini string"
+	fmt.Println(bebas)
+
+	bebas = 7.0
+
+	fmt.Println(bebas)
+	fmt.Println(math.Pow(bebas.(float64), 2)) //pangkat2
+
+	var dataMhs map[string]interface{}
+	dataMhs = map[string]interface{}{
+		"name":  "rifky azmi",
+		"kelas": "s7n",
+		"smt":   7,
+		"hobi":  []string{"hhmm", "hheemm"},
+	}
+	bebas = []string{
+		"aku",
+		"adalah",
+		"ceret",
+	}
+	fmt.Println(bebas)
+	fmt.Println(strings.Join(bebas.([]string), " "))
+	fmt.Println(dataMhs)
+	for keys, each := range dataMhs {
+		fmt.Println(keys, "=>", each)
+		// for _, hobies := range each["hobi"] {
+		fmt.Println(each["hobi"])
+		// }
+	}
+	type orang struct {
+		nama string
+		umur int
+	}
+	var bebas2 interface{} = orang{"azmi", 24}
+	var namanya = bebas2.(orang).nama
+	fmt.Println(namanya)
+
+	var aduh int = 100
+	var bebas3 interface{} = &aduh
+	var tampunganAduh *int = &aduh
+	fmt.Println(bebas3)
+	fmt.Println(tampunganAduh)
 }
