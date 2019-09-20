@@ -272,6 +272,10 @@ func main() {
 
 	//coba chanel
 	runtime.GOMAXPROCS(2)
+	var pesanan = make(chan string)
+
+	go sendMessageCh(pesanan)
+	printMessageCh(pesanan)
 	// var messages = make(chan string)
 	// var sayHelloTo = func(who string) {
 	// 	var data = fmt.Sprintf("hellow %s", who)
