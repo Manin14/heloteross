@@ -330,4 +330,7 @@ func main() {
 	cobaDefer()
 	checkSaya("imza")
 	cobaBanyakDefer()
+
+	//coba exit
+	cobaExit()
 }
