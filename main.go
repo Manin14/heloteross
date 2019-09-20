@@ -332,6 +332,9 @@ func main() {
 	cobaBanyakDefer()
 
 	//coba exit
-	cobaExit()
+	//cobaExit()
 	cetakanEh("eh eh ")
+
+	//coba error
+	checkNumber()
 }
