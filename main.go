@@ -333,4 +333,5 @@ func main() {
 
 	//coba exit
 	cobaExit()
+	cetakanEh("eh eh ")
 }

@@ -14,3 +14,7 @@ func cobaExit() {
 	fmt.Println("halo hari ini adalah hari ...")
 
 }
+
+func cetakanEh(eh string) {
+	fmt.Println(eh)
+}
