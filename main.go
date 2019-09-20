@@ -335,6 +335,15 @@ func main() {
 	//cobaExit()
 	cetakanEh("eh eh ")
 
+	//coba custom error
+	var cobaCErr, pesanerr = cobaCustomError("11")
+	if pesanerr == nil {
+		fmt.Println(cobaCErr)
+	} else {
+		fmt.Println(pesanerr)
+	}
+
 	//coba error
 	checkNumber()
+
 }

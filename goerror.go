@@ -1,8 +1,10 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"strconv"
+	"strings"
 )
 
 func checkNumber() {
@@ -20,4 +22,10 @@ func checkNumber() {
 		//throw error here
 		fmt.Println("ini error nya", err.Error())
 	}
+}
+func cobaCustomError(input string) (bool, error) {
+	if strings.TrimSpace(input) == "" {
+		return false, errors.New("tidak boleh kosong ya")
+	}
+	return true, nil
 }
