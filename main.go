@@ -326,4 +326,8 @@ func main() {
 	}
 	fmt.Println(ituh)
 
+	// coba defer
+	cobaDefer()
+	checkSaya("imza")
+	cobaBanyakDefer()
 }
