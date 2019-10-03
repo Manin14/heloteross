@@ -272,11 +272,11 @@ func main() {
 
 	//coba chanel
 	runtime.GOMAXPROCS(2)
-	var pesanan = make(chan int)
+	// var pesanan = make(chan int)
 
-	// go sendMessageCh(pesanan)
-	go sendDataTm(pesanan)
-	retreiveData(pesanan)
+	// // go sendMessageCh(pesanan)
+	// go sendDataTm(pesanan)
+	// retreiveData(pesanan)
 	// printMessageCh(pesanan)
 	// var messages = make(chan string)
 	// var sayHelloTo = func(who string) {
@@ -294,56 +294,67 @@ func main() {
 	// var message3 = <-messages
 	// fmt.Println(message3)
 
-	var pesan = make(chan string)
+	// var pesan = make(chan string)
 
-	for _, each := range []string{"satu", "dua", "tiga"} {
-		go func(who string) {
-			var data = fmt.Sprintf("hellow %s ", who)
-			pesan <- data
-		}(each)
-	}
-	for i := 0; i < 3; i++ {
-		fmt.Println(pesan)
+	// for _, each := range []string{"satu", "dua", "tiga"} {
+	// 	go func(who string) {
+	// 		var data = fmt.Sprintf("hellow %s ", who)
+	// 		pesan <- data
+	// 	}(each)
+	// }
+	// for i := 0; i < 3; i++ {
+	// 	fmt.Println(pesan)
 
-	}
-	//coba chan buf
-	cobaBuff()
+	// }
+	// //coba chan buf
+	// cobaBuff()
 
-	//coba select + testing chan
-	var isian = make(chan int)
-	go findMax(isian)
-	select {
-	case maxi := <-isian:
-		fmt.Println(maxi)
+	// //coba select + testing chan
+	// var isian = make(chan int)
+	// go findMax(isian)
+	// select {
+	// case maxi := <-isian:
+	// 	fmt.Println(maxi)
 
-	}
-	var hasilnya = findNol()
-	fmt.Println(hasilnya)
-	var ituh []int
+	// }
+	// var hasilnya = findNol()
+	// fmt.Println(hasilnya)
+	// var ituh []int
 
-	for id := 0; id <= 10; id++ {
-		ituh = append(ituh, id)
-	}
-	fmt.Println(ituh)
+	// for id := 0; id <= 10; id++ {
+	// 	ituh = append(ituh, id)
+	// }
+	// fmt.Println(ituh)
 
-	// coba defer
-	cobaDefer()
-	checkSaya("imza")
-	cobaBanyakDefer()
+	// // coba defer
+	// cobaDefer()
+	// checkSaya("imza")
+	// cobaBanyakDefer()
 
-	//coba exit
-	//cobaExit()
-	cetakanEh("eh eh ")
+	// //coba exit
+	// //cobaExit()
+	// cetakanEh("eh eh ")
 
-	//coba custom error
-	var cobaCErr, pesanerr = cobaCustomError("11")
-	if pesanerr == nil {
-		fmt.Println(cobaCErr)
-	} else {
-		fmt.Println(pesanerr)
-	}
+	// //coba custom error
+	// var cobaCErr, pesanerr = cobaCustomError("11")
+	// if pesanerr == nil {
+	// 	fmt.Println(cobaCErr)
+	// } else {
+	// 	fmt.Println(pesanerr)
+	// }
 
-	//coba error
-	checkNumber()
+	// //coba error
+	// checkNumber()
+	// //coba panic
+	// defer catch()
+	// var cobaPanic = cobaPanic()
+	// if cobaPanic == nil {
+	// 	fmt.Println("gk ada tuh")
+	// } else {
+	fmt.Println("ada")
+	// }
+
+	//format layout string
+	showdataMhs()
 
 }
